@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    margin: 1em;
+    background: black;
+}
+
+.nav-icon {
+    float: left;
+}
+
+.nav-icon img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav-links {
+    float: right;
+    line-height: 5rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: 2rem;
+}
