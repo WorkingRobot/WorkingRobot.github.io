@@ -4,6 +4,7 @@ var lBtnClicks = 0;
 var mousePositions = [];
 var mouseIter = 0;
 var mousePosX, mousePosY;
+var validHues = [0, 30, 60, 120, 180, 240, 270, 300];
 window.onload = function() {
     canvas = document.getElementById("fireflies");
     canvas.width = window.innerWidth;
@@ -21,7 +22,7 @@ window.onload = function() {
     }
 
     for (var i = 0; i < 100; i++) {
-        flies[i] = new Fly(con, canvas, i);
+        flies[i] = new Fly(con, canvas, i, validHues[i%validHues.length]);
     }
     setInterval(draw, 10);
 }
@@ -34,7 +35,7 @@ function draw() {
 }
 
 class Fly {
-    constructor(con, canvas, ind) {
+    constructor(con, canvas, ind, hue) {
         this.con = con;
         this.canvas = canvas;
         this.x = Math.random() * this.canvas.width;
@@ -45,6 +46,7 @@ class Fly {
         this.fadeSpeed = 0.003 * (Math.random() >= 0.5 ? 1 : -1);
         this.ind = ind;
         this.travelSpeed = Math.random() * 900 + 100;
+        this.hue = hue;
         this.r = 10;
     }
     move() {
@@ -82,7 +84,7 @@ class Fly {
         this.con.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
         this.con.closePath();
         var grd = this.con.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
-        grd.addColorStop(0, "rgba(255, 255, 255, "+this.fade+")");
+        grd.addColorStop(0, "hsla("+this.hue+", 100%, "+(lBtnClicks >= 5 ? "5" : "10")+"0%, "+this.fade+")");
         grd.addColorStop(1, "rgba(0, 0, 0, 0)");
         this.con.fillStyle = grd;
         this.con.fill();
