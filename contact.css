@@ -1,0 +1,41 @@
+.contact-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 95vw;
+    margin-top: 2rem;
+}
+
+.contact-col {
+    border: var(--text-color) 2px solid;
+    border-radius: .75rem;
+    padding: .75rem;
+    margin: 1rem;
+    flex: 1;
+}
+
+.contact-col * {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: block;
+}
+
+.contact-header {
+    font-size: 3rem;
+}
+
+.contact-body {
+    font-size: 1.5rem;
+}
+
+.contact-icon {
+    height: 5rem;
+}
+
+.content {
+    max-width: 100vw;
+}
+
+.body {
+    display: block;
+}

@@ -1,0 +1,48 @@
+.project {
+    margin: 50px 0;
+}
+
+.project-icon {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.project-left .project-icon {
+    float: left;
+}
+
+.project-right .project-icon {
+    float: right;
+}
+
+.project-right .project-link {
+    margin-right: 1.25rem;
+}
+
+.project-header {
+    float: left;
+}
+.project-link {
+    float: right;
+}
+.project-link img {
+    width: 2rem;
+    height: 2rem;
+}
+.project-title {
+    font-size: 2rem;
+    overflow: auto;
+}
+
+.project-timestamp {
+    font-size: 1.5rem;
+    margin-bottom: 0.375rem;
+}
+
+.project-body {
+    overflow: auto;
+}
+.project-left .project-body {
+    padding-left: 20px;
+}
