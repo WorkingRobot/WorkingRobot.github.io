@@ -46,3 +46,13 @@
 .project-left .project-body {
     padding-left: 20px;
 }
+
+@media only screen and (max-height: 1400px) {
+    .content-container {
+        display: block;
+        padding-top: 6rem;
+    }
+    .content {
+        margin: 0 auto;
+    }
+}

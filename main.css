@@ -45,14 +45,13 @@ nav {
 }
 
 .nav-links a {
-    color: var(--text-color);
     text-transform: uppercase;
     margin: 20px;
     font-size: 2rem;
 }
 
 a {
-    color: inherit;
+    color: var(--text-color);
     text-decoration: none;
 }
 a:hover {
@@ -65,7 +64,6 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 14rem;
 }
 
 .content {
@@ -76,4 +74,26 @@ a:hover {
 .header {
     font-size: 3rem;
     text-align: center;
+}
+
+@media only screen and (max-height: 1400px) {
+    .nav-title {
+        font-size: 2rem;
+        padding-left: 0.5rem;
+    }
+    .nav-icon img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .nav-links {
+        float: right;
+        line-height: 3rem;
+    }
+    .content-container {
+        display: block;
+        padding-top: 6rem;
+    }
+    .content {
+        margin: 0 auto;
+    }
 }

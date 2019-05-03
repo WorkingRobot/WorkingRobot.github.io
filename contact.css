@@ -25,7 +25,7 @@
 }
 
 .contact-body {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .contact-icon {
@@ -42,4 +42,18 @@
 
 .body {
     display: block;
+}
+
+@media only screen and (max-width: 2000px) {
+    .content-container {
+        display: flex;
+    }
+
+    .contact-body {
+        font-size: 1rem;
+    }
+
+    .contact-header {
+        font-size: 2rem;
+    }
 }
